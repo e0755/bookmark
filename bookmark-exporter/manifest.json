@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "小灵收藏夹",
+  "version": "1.0",
+  "description": "一个简单易用的Chrome书签导出工具",
+  "author": {
+    "name": "许文婷",
+    "email": "andy@590.net",
+    "url": "https://github.com/e0755/bookmark"
+  },
+  "homepage_url": "https://github.com/e0755/bookmark",
+  "permissions": [
+    "bookmarks",
+    "downloads"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+} 

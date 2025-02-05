@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "小灵收藏夹",
-  "version": "2.0",
-  "description": "一个功能强大的Chrome书签管理工具",
+  "version": "1.0",
+  "description": "一个简单易用的Chrome书签导出工具",
   "author": {
     "name": "许文婷",
     "email": "andy@590.net",
@@ -12,9 +12,6 @@
   "permissions": [
     "bookmarks",
     "downloads"
-  ],
-  "host_permissions": [
-    "<all_urls>"
   ],
   "action": {
     "default_popup": "popup.html"

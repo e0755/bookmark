@@ -60,21 +60,6 @@
       font-weight: bold;
       margin-bottom: 8px;
       color: #333;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .tools-button {
-      font-size: 12px;
-      padding: 4px 8px;
-      background-color: #666;
-      color: white;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-    .tools-button:hover {
-      background-color: #555;
     }
     .checkbox-group {
       display: flex;
@@ -139,93 +124,6 @@
       margin: 5px 0;
       font-style: italic;
     }
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 1000;
-    }
-    .modal-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      width: 80%;
-      max-height: 80%;
-      overflow: auto;
-    }
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    .modal-title {
-      font-size: 16px;
-      font-weight: bold;
-      color: #333;
-    }
-    .close-button {
-      background: none;
-      border: none;
-      font-size: 20px;
-      color: #666;
-      cursor: pointer;
-      padding: 0;
-    }
-    .progress-bar {
-      width: 100%;
-      height: 4px;
-      background-color: #f0f0f0;
-      border-radius: 2px;
-      margin: 10px 0;
-    }
-    .progress-bar-fill {
-      height: 100%;
-      background-color: #4CAF50;
-      border-radius: 2px;
-      width: 0;
-      transition: width 0.3s ease;
-    }
-    .result-list {
-      margin-top: 15px;
-    }
-    .result-item {
-      padding: 8px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      margin-bottom: 8px;
-      font-size: 13px;
-    }
-    .result-item:hover {
-      background-color: #f8f8f8;
-    }
-    .result-title {
-      font-weight: bold;
-      color: #333;
-    }
-    .result-url {
-      color: #666;
-      word-break: break-all;
-    }
-    .result-path {
-      color: #999;
-      font-size: 12px;
-      margin-top: 4px;
-    }
-    .action-buttons {
-      margin-top: 15px;
-      display: flex;
-      gap: 10px;
-      justify-content: flex-end;
-    }
   </style>
 </head>
 <body>
@@ -239,10 +137,7 @@
   </div>
   <div id="filterInfo" class="filter-info"></div>
   <div class="options-panel">
-    <div class="options-title">
-      导出选项
-      <button id="toolsBtn" class="tools-button">工具</button>
-    </div>
+    <div class="options-title">导出选项</div>
     <div class="checkbox-group">
       <div class="checkbox-item">
         <input type="checkbox" id="bookmarkBar" checked>
@@ -265,27 +160,6 @@
   </div>
   <div id="preview" class="preview-area"></div>
   <div id="status" class="status"></div>
-
-  <!-- 工具模态框 -->
-  <div id="toolsModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="modal-title">书签工具</span>
-        <button class="close-button">&times;</button>
-      </div>
-      <div class="button-group">
-        <button id="duplicateCheckBtn">清理重复书签</button>
-        <button id="deadlinkCheckBtn">清理无效链接</button>
-        <button id="aiCategoryBtn">智能分类</button>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-bar-fill"></div>
-      </div>
-      <div id="checkStatus" class="status"></div>
-      <div id="categoryPreview" class="preview-area" style="display: none;"></div>
-    </div>
-  </div>
-
   <script src="popup.js"></script>
 </body>
 </html> 
